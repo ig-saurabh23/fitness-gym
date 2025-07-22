@@ -1,0 +1,460 @@
+:root {
+    --bg-color: #000;
+    --snd-bg-color: #111;
+    --text-color: #fff;
+    --main-color: #ff0000;
+    --accent-color: #ff5252;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    overflow-x: hidden;
+}
+
+section {
+    padding: 6rem 9%;
+    min-height: 100vh;
+}
+
+.heading {
+    text-align: center;
+    font-size: 5rem;
+    margin-bottom: 5rem;
+}
+
+.heading span {
+    color: var(--main-color);
+}
+
+.heading:hover span {
+    text-shadow: 0 0 15px var(--main-color);
+    transition: all 0.3s ease;
+}
+
+/* Pricing Plans Section */
+.pricing-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2.5rem;
+    margin-bottom: 6rem;
+}
+
+.pricing-card {
+    background: var(--snd-bg-color);
+    border-radius: 20px;
+    padding: 3rem;
+    text-align: center;
+    border: 2px solid transparent;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    transition: all 0.5s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.pricing-card:hover {
+    border-color: var(--main-color);
+    transform: translateY(-10px);
+    box-shadow: 0 0 25px var(--main-color);
+}
+
+.pricing-card h3 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    color: var(--main-color);
+}
+
+.price {
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    color: #fff;
+}
+
+.price span {
+    font-size: 1.5rem;
+    color: #ccc;
+}
+
+.features {
+    margin-bottom: 3rem;
+    text-align: left;
+}
+
+.features li {
+    list-style: none;
+    padding: 0.8rem 0;
+    font-size: 1.2rem;
+    border-bottom: 1px solid #333;
+    display: flex;
+    align-items: center;
+}
+
+.features li i {
+    color: var(--main-color);
+    margin-right: 1rem;
+    font-size: 1.5rem;
+}
+
+.btn {
+    display: inline-block;
+    padding: 1rem 2.5rem;
+    background: transparent;
+    color: #fff;
+    border: 2px solid var(--main-color);
+    border-radius: 30px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.4s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.btn:hover {
+    background: var(--main-color);
+    box-shadow: 0 0 20px var(--main-color);
+    transform: scale(1.05);
+}
+
+/* Popular Tag */
+.popular-tag {
+    position: absolute;
+    top: 20px;
+    right: -35px;
+    background: var(--main-color);
+    color: #fff;
+    padding: 0.5rem 3rem;
+    transform: rotate(45deg);
+    font-weight: 600;
+    font-size: 0.9rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Experts Section */
+.experts-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 3rem;
+    margin-bottom: 6rem;
+}
+
+.expert-card {
+    background: var(--snd-bg-color);
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+    transition: all 0.4s ease;
+}
+
+.expert-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 0 25px var(--main-color);
+}
+
+.expert-img {
+    height: 350px;
+    overflow: hidden;
+}
+
+.expert-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: all 0.5s ease;
+}
+
+.expert-card:hover .expert-img img {
+    transform: scale(1.1);
+}
+
+.expert-info {
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.expert-info h3 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+    color: var(--main-color);
+}
+
+.expert-info p {
+    color: #ccc;
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+}
+
+.expert-qualifications {
+    margin-top: 1.5rem;
+}
+
+.expert-qualifications h4 {
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+    color: #fff;
+}
+
+.expert-qualifications ul {
+    padding-left: 1.5rem;
+}
+
+.expert-qualifications li {
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+    color: #aaa;
+}
+
+.expert-fees {
+    margin-top: 1.5rem;
+    font-size: 1.3rem;
+    color: #fff;
+}
+
+.expert-fees span {
+    color: var(--main-color);
+    font-weight: 600;
+}
+
+.hire-btn {
+    display: block;
+    width: 100%;
+    padding: 1rem;
+    margin-top: 1.5rem;
+    background: var(--main-color);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.hire-btn:hover {
+    background: #d40000;
+    box-shadow: 0 0 15px var(--main-color);
+    transform: translateY(-3px);
+}
+
+/* Payment Methods Section */
+.payment-methods {
+    background: var(--snd-bg-color);
+    border-radius: 20px;
+    padding: 3rem;
+    text-align: center;
+}
+
+.payment-methods h2 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    color: var(--main-color);
+}
+
+.payment-options {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.payment-option {
+    background: #222;
+    padding: 1.5rem;
+    border-radius: 15px;
+    width: 150px;
+    transition: all 0.3s ease;
+}
+
+.payment-option:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 15px var(--main-color);
+}
+
+.payment-option img {
+    width: 100%;
+    height: auto;
+    filter: grayscale(100%);
+    transition: all 0.3s ease;
+}
+
+.payment-option:hover img {
+    filter: grayscale(0%);
+}
+
+/* Modal Styles */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background: var(--snd-bg-color);
+    padding: 2rem;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 500px;
+    position: relative;
+    animation: modalOpen 0.4s ease;
+}
+
+@keyframes modalOpen {
+    from {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.close-modal {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 2rem;
+    cursor: pointer;
+    color: var(--main-color);
+    transition: all 0.3s ease;
+}
+
+.close-modal:hover {
+    transform: rotate(90deg);
+}
+
+.modal-title {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    color: var(--main-color);
+    text-align: center;
+}
+
+.payment-details {
+    background: #222;
+    padding: 1.5rem;
+    border-radius: 8px;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.payment-details p {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+
+.payment-details span {
+    color: var(--main-color);
+    font-weight: 600;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-size: 1.1rem;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 0.8rem;
+    border-radius: 5px;
+    border: 1px solid #333;
+    background: #222;
+    color: white;
+    font-size: 1rem;
+}
+
+.payment-method-options {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    margin-top: 0.5rem;
+}
+
+.payment-method-options label {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    cursor: pointer;
+}
+
+.modal-pay-btn {
+    display: block;
+    width: 100%;
+    padding: 1rem;
+    background: var(--main-color);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 1.5rem;
+}
+
+.modal-pay-btn:hover {
+    background: #d40000;
+    box-shadow: 0 0 15px var(--main-color);
+    transform: translateY(-3px);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .heading {
+        font-size: 3.5rem;
+    }
+    
+    .pricing-container, .experts-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .payment-options {
+        gap: 1rem;
+    }
+    
+    .payment-option {
+        width: 120px;
+    }
+    
+    .modal-content {
+        padding: 1.5rem;
+    }
+    
+    .modal-title {
+        font-size: 1.8rem;
+    }
+    .payment-methods img {
+    height: 40px;
+    margin: 0 10px;
+    filter: grayscale(30%);
+    transition: all 0.3s ease;
+}
+
+.payment-methods img:hover {
+    filter: grayscale(0%);
+    transform: scale(1.1);
+}
+}

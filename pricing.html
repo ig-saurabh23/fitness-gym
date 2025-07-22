@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fitness Freak - Pricing</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="pricing.css">
+</head>
+<body>
+    <section id="pricing">
+        <h2 class="heading">Our <span>Subscription</span> Plans</h2>
+        
+        <div class="pricing-container">
+            <!-- Basic Plan -->
+            <div class="pricing-card">
+                <h3>Basic</h3>
+                <div class="price">₹999 <span>/month</span></div>
+                <ul class="features">
+                    <li><i class='bx bx-check'></i> Gym Access (6AM-8PM)</li>
+                    <li><i class='bx bx-check'></i> Cardio Equipment</li>
+                    <li><i class='bx bx-check'></i> Free Weights</li>
+                    <li><i class='bx bx-x'></i> Personal Trainer</li>
+                    <li><i class='bx bx-x'></i> Group Classes</li>
+                </ul>
+                <button class="btn paynow-btn" data-plan="Basic" data-price="999">Pay Now</button>
+            </div>
+            
+            <!-- Standard Plan -->
+            <div class="pricing-card">
+                <h3>Standard</h3>
+                <div class="price">₹1,799 <span>/month</span></div>
+                <ul class="features">
+                    <li><i class='bx bx-check'></i> Gym Access (6AM-10PM)</li>
+                    <li><i class='bx bx-check'></i> All Equipment</li>
+                    <li><i class='bx bx-check'></i> 2 Group Classes/Week</li>
+                    <li><i class='bx bx-check'></i> Basic Diet Plan</li>
+                    <li><i class='bx bx-x'></i> Personal Trainer</li>
+                </ul>
+                <button class="btn paynow-btn" data-plan="Standard" data-price="1799">Pay Now</button>
+            </div>
+            
+            <!-- Premium Plan -->
+            <div class="pricing-card">
+                <div class="popular-tag">Most Popular</div>
+                <h3>Premium</h3>
+                <div class="price">₹2,999 <span>/month</span></div>
+                <ul class="features">
+                    <li><i class='bx bx-check'></i> 24/7 Gym Access</li>
+                    <li><i class='bx bx-check'></i> Unlimited Classes</li>
+                    <li><i class='bx bx-check'></i> Personal Trainer (4 sessions)</li>
+                    <li><i class='bx bx-check'></i> Customized Diet Plan</li>
+                    <li><i class='bx bx-check'></i> Progress Tracking</li>
+                </ul>
+                <button class="btn paynow-btn" data-plan="Premium" data-price="2999">Pay Now</button>
+            </div>
+            
+            <!-- Annual Plan -->
+            <div class="pricing-card">
+                <h3>Annual</h3>
+                <div class="price">₹24,999 <span>/year</span></div>
+                <ul class="features">
+                    <li><i class='bx bx-check'></i> 24/7 Gym Access</li>
+                    <li><i class='bx bx-check'></i> Unlimited Classes</li>
+                    <li><i class='bx bx-check'></i> Personal Trainer (12 sessions)</li>
+                    <li><i class='bx bx-check'></i> Premium Diet Plan</li>
+                    <li><i class='bx bx-check'></i> Free Fitness Assessment</li>
+                </ul>
+                <button class="btn paynow-btn" data-plan="Annual" data-price="24999">Pay Now</button>
+            </div>
+        </div>
+        
+        <h2 class="heading">Our <span>Experts</span></h2>
+        
+        <div class="experts-container">
+            <!-- Trainer Card -->
+            <div class="expert-card">
+                <div class="expert-img">
+                    <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Personal Trainer">
+                </div>
+                <div class="expert-info">
+                    <h3>Rahul Sharma</h3>
+                    <p>Certified Personal Trainer</p>
+                    <div class="expert-qualifications">
+                        <h4>Qualifications:</h4>
+                        <ul>
+                            <li>ACE Certified Personal Trainer</li>
+                            <li>5+ Years Experience</li>
+                            <li>Specialized in Strength Training</li>
+                            <li>Rehabilitation Expert</li>
+                        </ul>
+                    </div>
+                    <div class="expert-fees">
+                        Personal Training: <span>₹1,500/session</span>
+                    </div>
+                    <button class="hire-btn" data-expert="Rahul Sharma" data-service="Personal Training" data-price="1500">Hire Now</button>
+                </div>
+            </div>
+            
+            <!-- Dietician Card -->
+            <div class="expert-card">
+                <div class="expert-img">
+                    <img src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Dietician">
+                </div>
+                <div class="expert-info">
+                    <h3>Priya Patel</h3>
+                    <p>Certified Nutritionist</p>
+                    <div class="expert-qualifications">
+                        <h4>Qualifications:</h4>
+                        <ul>
+                            <li>M.Sc in Nutrition & Dietetics</li>
+                            <li>8+ Years Experience</li>
+                            <li>Sports Nutrition Specialist</li>
+                            <li>Weight Management Expert</li>
+                        </ul>
+                    </div>
+                    <div class="expert-fees">
+                        Diet Consultation: <span>₹2,000/session</span>
+                    </div>
+                    <button class="hire-btn" data-expert="Priya Patel" data-service="Diet Consultation" data-price="2000">Hire Now</button>
+                </div>
+            </div>
+        </div>
+        
+        <div class="payment-methods">
+            <h2>Payment Options</h2>
+            <div class="payment-options">
+                <div class="payment-option">
+                    <img src="upi.jpg" alt="Mastercard" width="80">
+                </div>
+                <div class="payment-option">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Visa_Inc._logo.svg/2560px-Visa_Inc._logo.svg.png" alt="Visa">
+                </div>
+                <div class="payment-option">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Mastercard-logo.svg/1280px-Mastercard-logo.svg.png" alt="Mastercard">
+                </div>
+                <div class="payment-option">
+                    <img src="paytm.jpg" alt="Mastercard" width="80">
+                </div>
+                <div class="payment-option">
+<img src="phonepay.jpg" alt="Mastercard" width="80">
+                </div>
+            </div>
+        </div>
+
+        <!-- Payment Modal -->
+        <div id="paymentModal" class="modal">
+            <div class="modal-content">
+                <span class="close-modal">&times;</span>
+                <h2 class="modal-title">Complete Your Payment</h2>
+                <div class="payment-details">
+                    <p>Plan: <span id="paymentPlan"></span></p>
+                    <p>Amount: ₹<span id="paymentAmount"></span></p>
+                </div>
+                <form id="paymentForm">
+                    <div class="form-group">
+                        <label for="name">Full Name</label>
+                        <input type="text" id="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" id="phone" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Payment Method</label>
+                        <div class="payment-method-options">
+                            <label><input type="radio" name="paymentMethod" value="UPI" checked> UPI</label>
+                            <label><input type="radio" name="paymentMethod" value="Card"> Credit/Debit Card</label>
+                            <label><input type="radio" name="paymentMethod" value="NetBanking"> Net Banking</label>
+                        </div>
+                    </div>
+                    <button type="submit" class="modal-pay-btn">Pay Now</button>
+                </form>
+            </div>
+        </div>
+
+        <!-- Expert Hire Modal -->
+        <div id="hireModal" class="modal">
+            <div class="modal-content">
+                <span class="close-modal">&times;</span>
+                <h2 class="modal-title">Book <span id="hireExpertName"></span></h2>
+                <div class="payment-details">
+                    <p>Service: <span id="hireService"></span></p>
+                    <p>Fees: ₹<span id="hirePrice"></span> per session</p>
+                </div>
+                <form id="hireForm">
+                    <div class="form-group">
+                        <label for="hireName">Your Name</label>
+                        <input type="text" id="hireName" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="hireEmail">Email</label>
+                        <input type="email" id="hireEmail" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="hirePhone">Phone Number</label>
+                        <input type="tel" id="hirePhone" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="hireDate">Preferred Date</label>
+                        <input type="date" id="hireDate" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Payment Method</label>
+                        <div class="payment-method-options">
+                            <label><input type="radio" name="hirePaymentMethod" value="UPI" checked> UPI</label>
+                            <label><input type="radio" name="hirePaymentMethod" value="Card"> Credit/Debit Card</label>
+                        </div>
+                    </div>
+                    <button type="submit" class="modal-pay-btn">Confirm & Pay</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <script src="pricing.js"></script>
+</body>
+</html>

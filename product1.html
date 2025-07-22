@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Premium Whey Protein - Fitness Freak</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="product.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="container">
+                <a href="index.html" class="logo">Fitness Freak</a>
+                <div class="nav-links">
+                    <a href="index.html">Home</a>
+                    <a href="supplements.html">Supplements</a>
+                    <a href="equipment.html">Equipment</a>
+                    <a href="contact.html">Contact</a>
+                    <div class="cart-icon">
+                        <i class='bx bx-cart'></i>
+                        <span class="cart-count">0</span>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container">
+        <section class="breadcrumb">
+            <a href="index.html">Home</a> / 
+            <a href="supplements.html">Supplements</a> / 
+            <span>Premium Whey Protein</span>
+        </section>
+
+        <section class="product-container">
+            <!-- Product Gallery -->
+            <div class="product-gallery">
+                <div class="main-image">
+                    <img src="nitro tech.jpg" alt="MuscleTech NitroTech Whey Protein" id="mainImage">
+                </div>
+                <div class="thumbnail-container">
+                    <div class="thumbnail active" data-image="images/nitro-tech.jpg">
+                        <img src="back tech.jpg" alt="NitroTech Front">
+                    </div>
+                    <div class="thumbnail" data-image="images/nitro-tech-back.jpg">
+                        <img src="images/nitro-tech-back.jpg" alt="NitroTech Back">
+                    </div>
+                    <div class="thumbnail" data-image="images/nitro-tech-scoop.jpg">
+                        <img src="images/nitro-tech-scoop.jpg" alt="NitroTech Scoop">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product Info -->
+            <div class="product-info">
+                <h1>MuscleTech NitroTech Whey Protein</h1>
+                <div class="brand">by MuscleTech</div>
+                
+                <div class="rating-overview">
+                    <div class="stars">★★★★★</div>
+                    <span class="rating-value">4.9</span>
+                    <span class="review-count">(428 reviews)</span>
+                    <a href="#reviews" class="see-all">See all reviews</a>
+                </div>
+                
+                <div class="price-container">
+                    <div class="current-price">₹2,499</div>
+                    <div class="original-price">₹3,299</div>
+                    <div class="discount">24% OFF</div>
+                    <div class="tax-info">+ Free Shipping & Tax Included</div>
+                </div>
+                
+                <div class="availability">
+                    <i class='bx bx-check-circle'></i> In Stock (Only 12 left)
+                </div>
+                
+                <div class="flavor-selection">
+                    <h3>Flavor:</h3>
+                    <div class="flavor-options">
+                        <button class="flavor-btn active" data-flavor="chocolate">Chocolate</button>
+                        <button class="flavor-btn" data-flavor="vanilla">Vanilla</button>
+                        <button class="flavor-btn" data-flavor="strawberry">Strawberry</button>
+                    </div>
+                </div>
+                
+                <div class="size-selection">
+                    <h3>Size:</h3>
+                    <div class="size-options">
+                        <button class="size-btn active" data-size="2">2 lbs</button>
+                        <button class="size-btn" data-size="4">4 lbs</button>
+                        <button class="size-btn" data-size="6">6 lbs</button>
+                    </div>
+                </div>
+                
+                <div class="quantity-selector">
+                    <h3>Quantity:</h3>
+                    <div class="quantity-control">
+                        <button class="qty-btn minus"><i class='bx bx-minus'></i></button>
+                        <input type="number" value="1" min="1" max="10" class="qty-input">
+                        <button class="qty-btn plus"><i class='bx bx-plus'></i></button>
+                    </div>
+                </div>
+               <button class="add-to-cart" onclick="addToCart({
+    id: 'product1',
+    name: 'Whey Protein',
+    price: 2499,
+    image: 'whey-protein.jpg',
+    category: 'Supplements'
+})">Add to Cart</button>
+                    <button class="buy-now">
+                        Buy Now
+                    </button>
+                </div>
+                
+                <div class="delivery-info">
+                    <div class="delivery-option">
+                        <i class='bx bxs-truck'></i>
+                        <span>Free delivery on orders over ₹1000</span>
+                    </div>
+                    <div class="delivery-option">
+                        <i class='bx bx-undo'></i>
+                        <span>30-day easy returns</span>
+                    </div>
+                </div>
+                
+                <div class="social-share">
+                    <span>Share:</span>
+                    <a href="#"><i class='bx bxl-facebook'></i></a>
+                    <a href="#"><i class='bx bxl-twitter'></i></a>
+                    <a href="#"><i class='bx bxl-instagram'></i></a>
+                    <a href="#"><i class='bx bxl-whatsapp'></i></a>
+                </div>
+            </div>
+        </section>
+
+        <section class="product-details">
+            <div class="details-tabs">
+                <button class="tab-btn active" data-tab="description">Description</button>
+                <button class="tab-btn" data-tab="benefits">Benefits</button>
+                <button class="tab-btn" data-tab="ingredients">Ingredients</button>
+                <button class="tab-btn" data-tab="usage">Usage</button>
+            </div>
+            
+            <div class="tab-content active" id="description">
+                <h2>Product Description</h2>
+                <p>MuscleTech NitroTech Whey Protein is scientifically formulated to support muscle growth and recovery. Each serving delivers 24g of pure whey protein with added amino acids to maximize your workout results.</p>
+                
+                <h3>Key Features:</h3>
+                <ul>
+                    <li>24g of Premium Whey Protein per serving</li>
+                    <li>5.5g of naturally occurring BCAAs</li>
+                    <li>Supports muscle growth and recovery</li>
+                    <li>Great tasting with multiple flavor options</li>
+                    <li>No added sugar (varies by flavor)</li>
+                </ul>
+            </div>
+            
+            <div class="tab-content" id="benefits">
+                <h2>Product Benefits</h2>
+                <div class="benefits-grid">
+                    <div class="benefit-card">
+                        <i class='bx bx-muscle'></i>
+                        <h3>Muscle Growth</h3>
+                        <p>Provides high-quality protein to support muscle protein synthesis and growth.</p>
+                    </div>
+                    <div class="benefit-card">
+                        <i class='bx bx-time-five'></i>
+                        <h3>Fast Recovery</h3>
+                        <p>Helps repair and rebuild muscle tissue after intense workouts.</p>
+                    </div>
+                    <div class="benefit-card">
+                        <i class='bx bx-plus-medical'></i>
+                        <h3>Enhanced Strength</h3>
+                        <p>Supports strength gains when combined with resistance training.</p>
+                    </div>
+                    <div class="benefit-card">
+                        <i class='bx bx-heart'></i>
+                        <h3>Lean Muscle</h3>
+                        <p>Helps maintain lean muscle mass while dieting or cutting.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="tab-content" id="ingredients">
+                <h2>Ingredients</h2>
+                <p><strong>Primary Ingredients:</strong> Whey Protein Concentrate, Whey Protein Isolate, Cocoa (for chocolate flavor), Natural and Artificial Flavors, Lecithin, Salt, Acesulfame Potassium, Sucralose.</p>
+                
+                <h3>Nutritional Information (per 1 scoop serving):</h3>
+                <table class="nutrition-table">
+                    <tr>
+                        <td>Calories</td>
+                        <td>120</td>
+                    </tr>
+                    <tr>
+                        <td>Protein</td>
+                        <td>24g</td>
+                    </tr>
+                    <tr>
+                        <td>Carbohydrates</td>
+                        <td>3g</td>
+                    </tr>
+                    <tr>
+                        <td>Sugar</td>
+                        <td>1g</td>
+                    </tr>
+                    <tr>
+                        <td>Fat</td>
+                        <td>1.5g</td>
+                    </tr>
+                </table>
+            </div>
+            
+            <div class="tab-content" id="usage">
+                <h2>Usage Directions</h2>
+                <p><strong>Recommended Use:</strong> As a dietary supplement, mix 1 scoop with 6-8 oz of cold water or your beverage of choice. For best results, consume 1-3 servings daily, including one serving immediately after your workout.</p>
+                
+                <div class="warning">
+                    <i class='bx bx-error-circle'></i>
+                    <p><strong>Warning:</strong> Do not exceed recommended dosage. This product is intended for healthy adults 18 years of age or older. Consult your physician before using this or any dietary supplement.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="customer-reviews" id="reviews">
+            <h2>Customer Reviews</h2>
+            
+            <div class="review-summary">
+                <div class="overall-rating">
+                    <div class="average">4.9</div>
+                    <div class="stars">★★★★★</div>
+                    <div class="total-reviews">428 reviews</div>
+                </div>
+                
+                <div class="rating-distribution">
+                    <div class="rating-bar">
+                        <span class="label">5 star</span>
+                        <div class="bar-container">
+                            <div class="bar" style="width: 85%;"></div>
+                        </div>
+                        <span class="percentage">85%</span>
+                    </div>
+                    <div class="rating-bar">
+                        <span class="label">4 star</span>
+                        <div class="bar-container">
+                            <div class="bar" style="width: 10%;"></div>
+                        </div>
+                        <span class="percentage">10%</span>
+                    </div>
+                    <div class="rating-bar">
+                        <span class="label">3 star</span>
+                        <div class="bar-container">
+                            <div class="bar" style="width: 3%;"></div>
+                        </div>
+                        <span class="percentage">3%</span>
+                    </div>
+                    <div class="rating-bar">
+                        <span class="label">2 star</span>
+                        <div class="bar-container">
+                            <div class="bar" style="width: 1%;"></div>
+                        </div>
+                        <span class="percentage">1%</span>
+                    </div>
+                    <div class="rating-bar">
+                        <span class="label">1 star</span>
+                        <div class="bar-container">
+                            <div class="bar" style="width: 1%;"></div>
+                        </div>
+                        <span class="percentage">1%</span>
+                    </div>
+                </div>
+                
+                <button class="write-review-btn" id="openReviewModal">
+                    <i class='bx bx-edit'></i> Write a Review
+                </button>
+            </div>
+            
+            <div class="review-filters">
+                <div class="filter-group">
+                    <label>Sort by:</label>
+                    <select id="sortReviews">
+                        <option value="newest">Newest First</option>
+                        <option value="highest">Highest Rating</option>
+                        <option value="lowest">Lowest Rating</option>
+                        <option value="helpful">Most Helpful</option>
+                    </select>
+                </div>
+                
+                <div class="filter-group">
+                    <label>Filter by:</label>
+                    <select id="filterReviews">
+                        <option value="all">All Ratings</option>
+                        <option value="5">5 Stars</option>
+                        <option value="4">4 Stars</option>
+                        <option value="3">3 Stars</option>
+                        <option value="2">2 Stars</option>
+                        <option value="1">1 Star</option>
+                    </select>
+                </div>
+            </div>
+            
+            <div class="reviews-list">
+                <!-- Review 1 -->
+                <div class="review-card" data-rating="5">
+                    <div class="reviewer-info">
+                        <div class="avatar">
+                            <img src="images/users/user1.jpg" alt="Rahul Sharma">
+                        </div>
+                        <div class="name-date">
+                            <h4>Rahul Sharma</h4>
+                            <div class="verified">
+                                <i class='bx bx-badge-check'></i> Verified Buyer
+                            </div>
+                            <div class="date">March 15, 2024</div>
+                        </div>
+                    </div>
+                    
+                    <div class="review-content">
+                        <div class="rating">★★★★★</div>
+                        <h3>Best Protein I've Ever Used!</h3>
+                        <p>I've tried many protein powders over the years, but this is by far the best. The chocolate flavor tastes amazing, mixes easily, and doesn't leave that chalky aftertaste. I've noticed significant muscle gains since switching to this product. Highly recommend!</p>
+                        
+                        <div class="review-images">
+                            <img src="images/reviews/review1-1.jpg" alt="Review Image 1">
+                            <img src="images/reviews/review1-2.jpg" alt="Review Image 2">
+                        </div>
+                        
+                        <div class="review-actions">
+                            <button class="helpful-btn">
+                                <i class='bx bx-like'></i> Helpful (42)
+                            </button>
+                            <button class="reply-btn">
+                                <i class='bx bx-comment'></i> Reply
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Review 2 -->
+                <div class="review-card" data-rating="4">
+                    <div class="reviewer-info">
+                        <div class="avatar">
+                            <img src="images/users/user2.jpg" alt="Priya Patel">
+                        </div>
+                        <div class="name-date">
+                            <h4>Priya Patel</h4>
+                            <div class="verified">
+                                <i class='bx bx-badge-check'></i> Verified Buyer
+                            </div>
+                            <div class="date">February 28, 2024</div>
+                        </div>
+                    </div>
+                    
+                    <div class="review-content">
+                        <div class="rating">★★★★☆</div>
+                        <h3>Great Product, A Bit Pricey</h3>
+                        <p>The protein quality is excellent and it mixes well with just a shaker bottle. I've noticed better recovery times after my workouts. My only complaint is the price point - it's a bit more expensive than other options on the market. But you do get what you pay for in terms of quality.</p>
+                        
+                        <div class="review-actions">
+                            <button class="helpful-btn">
+                                <i class='bx bx-like'></i> Helpful (18)
+                            </button>
+                            <button class="reply-btn">
+                                <i class='bx bx-comment'></i> Reply
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="pagination">
+                <button class="page-btn active">1</button>
+                <button class="page-btn">2</button>
+                <button class="page-btn">3</button>
+                <button class="page-btn next">Next <i class='bx bx-chevron-right'></i></button>
+            </div>
+        </section>
+
+        <!-- Related Products -->
+        <section class="related-products">
+            <h2>You May Also Like</h2>
+            
+            <div class="products-grid">
+                <!-- Product 1 -->
+                <div class="product-card">
+                    <div class="badge">Bestseller</div>
+                    <div class="product-img">
+                        <img src="images/creatine.jpg" alt="MuscleTech Creatine">
+                        <div class="quick-view">Quick View</div>
+                    </div>
+                    <div class="product-info">
+                        <h3>MuscleTech Creatine</h3>
+                        <div class="rating">
+                            <div class="stars">★★★★★</div>
+                            <span>(521)</span>
+                        </div>
+                        <div class="price">
+                            <span class="current">₹1,299</span>
+                            <span class="original">₹1,799</span>
+                            <span class="discount">28% OFF</span>
+                        </div>
+                        <a href="product-creatine.html" class="view-btn">View Details</a>
+                    </div>
+                </div>
+                
+                <!-- Product 2 -->
+                <div class="product-card">
+                    <div class="badge">New</div>
+                    <div class="product-img">
+                        <img src="images/pre-workout.jpg" alt="MuscleBlaze Pre-Workout">
+                        <div class="quick-view">Quick View</div>
+                    </div>
+                    <div class="product-info">
+                        <h3>MuscleBlaze Pre-Workout</h3>
+                        <div class="rating">
+                            <div class="stars">★★★★☆</div>
+                            <span>(192)</span>
+                        </div>
+                        <div class="price">
+                            <span class="current">₹1,799</span>
+                            <span class="original">₹2,499</span>
+                            <span class="discount">28% OFF</span>
+                        </div>
+                        <a href="product-preworkout.html" class="view-btn">View Details</a>
+                    </div>
+                </div>
+                
+                <!-- Product 3 -->
+                <div class="product-card">
+                    <div class="product-img">
+                        <img src="images/multivitamin.jpg" alt="MuscleBlaze Multivitamin">
+                        <div class="quick-view">Quick View</div>
+                    </div>
+                    <div class="product-info">
+                        <h3>MuscleBlaze Multivitamin</h3>
+                        <div class="rating">
+                            <div class="stars">★★★★☆</div>
+                            <span>(278)</span>
+                        </div>
+                        <div class="price">
+                            <span class="current">₹999</span>
+                            <span class="original">₹1,299</span>
+                            <span class="discount">23% OFF</span>
+                        </div>
+                        <a href="product-multivitamin.html" class="view-btn">View Details</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Review Modal -->
+    <div class="modal" id="reviewModal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <h2>Write a Review</h2>
+            
+            <form id="reviewForm">
+                <div class="form-group">
+                    <label>Your Rating</label>
+                    <div class="rating-input">
+                        <input type="radio" id="star5" name="rating" value="5">
+                        <label for="star5"><i class='bx bx-star'></i></label>
+                        <input type="radio" id="star4" name="rating" value="4">
+                        <label for="star4"><i class='bx bx-star'></i></label>
+                        <input type="radio" id="star3" name="rating" value="3">
+                        <label for="star3"><i class='bx bx-star'></i></label>
+                        <input type="radio" id="star2" name="rating" value="2">
+                        <label for="star2"><i class='bx bx-star'></i></label>
+                        <input type="radio" id="star1" name="rating" value="1">
+                        <label for="star1"><i class='bx bx-star'></i></label>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="reviewTitle">Review Title</label>
+                    <input type="text" id="reviewTitle" placeholder="Summarize your experience" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="reviewText">Your Review</label>
+                    <textarea id="reviewText" rows="5" placeholder="Share your experience with this product" required></textarea>
+                </div>
+                
+                <div class="form-group">
+                    <label>Upload Photos (Optional - Max 3)</label>
+                    <div class="image-upload">
+                        <label for="reviewImages" class="upload-btn">
+                            <i class='bx bx-camera'></i> Add Photos
+                        </label>
+                        <input type="file" id="reviewImages" multiple accept="image/*">
+                        <div class="preview-container" id="imagePreview"></div>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="userName">Your Name</label>
+                    <input type="text" id="userName" placeholder="Enter your name" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="userEmail">Email Address</label>
+                    <input type="email" id="userEmail" placeholder="Enter your email" required>
+                </div>
+                
+                <div class="form-group checkbox">
+                    <input type="checkbox" id="verifiedPurchase" checked>
+                    <label for="verifiedPurchase">I purchased this product from Fitness Freak</label>
+                </div>
+                
+                <button type="submit" class="submit-review">Submit Review</button>
+            </form>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Fitness Freak</h3>
+                    <p>Your one-stop shop for premium fitness supplements and equipment.</p>
+                    <div class="socials">
+                        <a href="#"><i class='bx bxl-facebook'></i></a>
+                        <a href="#"><i class='bx bxl-instagram'></i></a>
+                        <a href="#"><i class='bx bxl-twitter'></i></a>
+                        <a href="#"><i class='bx bxl-youtube'></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="supplements.html">Supplements</a></li>
+                        <li><a href="equipment.html">Equipment</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Customer Service</h3>
+                    <ul>
+                        <li><a href="#">Shipping Policy</a></li>
+                        <li><a href="#">Return Policy</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms & Conditions</a></li>
+                        <li><a href="#">FAQs</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact Us</h3>
+                    <p><i class='bx bx-map'></i> 123 Fitness Street, Mumbai, India</p>
+                    <p><i class='bx bx-phone'></i> +91 9876543210</p>
+                    <p><i class='bx bx-envelope'></i> info@fitnessfreak.com</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Fitness Freak. All rights reserved.</p>
+                <div class="payment-methods">
+                    <i class='bx bxl-visa'></i>
+                    <i class='bx bxl-mastercard'></i>
+                    <i class='bx bxl-paypal'></i>
+                    <i class='bx bxl-google-pay'></i>
+                    <i class='bx bxl-amazon'></i>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="product.js"></script>
+</body>
+</html>

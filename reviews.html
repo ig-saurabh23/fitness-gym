@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elite Fitness - Member Reviews</title>
+    <link rel="stylesheet" href="reviews.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Oswald:wght@500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header class="main-header">
+            <div class="gym-stats">
+                <div class="stat-item">
+                    <div class="stat-number">5,000+</div>
+                    <div class="stat-label">Members</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">4.9★</div>
+                    <div class="stat-label">Average Rating</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">15</div>
+                    <div class="stat-label">Certified Trainers</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">24/7</div>
+                    <div class="stat-label">Availability</div>
+                </div>
+            </div>
+            
+            <h1><span class="red-text">ELITE FITNESS</span> <span class="white-text">MEMBER REVIEWS</span></h1>
+            <p class="subtitle">Real stories from our fitness community. See how we've helped transform lives.</p>
+            
+            <div class="review-highlights">
+                <div class="highlight-card">
+                    <i class="fas fa-dumbbell highlight-icon"></i>
+                    <h3>Weight Loss</h3>
+                    <p>Average of 12kg lost in first 3 months</p>
+                </div>
+                <div class="highlight-card">
+                    <i class="fas fa-heartbeat highlight-icon"></i>
+                    <h3>Health Improvements</h3>
+                    <p>87% report better energy levels</p>
+                </div>
+                <div class="highlight-card">
+                    <i class="fas fa-users highlight-icon"></i>
+                    <h3>Community</h3>
+                    <p>94% feel motivated by our members</p>
+                </div>
+            </div>
+        </header>
+
+        <div class="review-form-container" id="reviewFormContainer">
+            <button class="close-btn" id="closeBtn">&times;</button>
+            <h2>Share Your Experience</h2>
+            <form id="reviewForm">
+                <div class="form-group">
+                    <label for="name">Your Name:</label>
+                    <input type="text" id="name" required placeholder="John Smith">
+                </div>
+                <div class="form-group">
+                    <label for="membership">Membership Type:</label>
+                    <select id="membership">
+                        <option value="">Select membership</option>
+                        <option value="basic">Basic</option>
+                        <option value="premium">Premium</option>
+                        <option value="family">Family</option>
+                        <option value="student">Student</option>
+                        <option value="corporate">Corporate</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="duration">How long have you been a member?</label>
+                    <select id="duration">
+                        <option value="">Select duration</option>
+                        <option value="1-3">1-3 months</option>
+                        <option value="3-6">3-6 months</option>
+                        <option value="6-12">6-12 months</option>
+                        <option value="1-2">1-2 years</option>
+                        <option value="2+">2+ years</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="rating">Rating:</label>
+                    <div class="star-rating">
+                        <i class="far fa-star" data-rating="1"></i>
+                        <i class="far fa-star" data-rating="2"></i>
+                        <i class="far fa-star" data-rating="3"></i>
+                        <i class="far fa-star" data-rating="4"></i>
+                        <i class="far fa-star" data-rating="5"></i>
+                        <input type="hidden" id="rating" name="rating" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="review">Your Experience:</label>
+                    <textarea id="review" rows="6" required placeholder="Tell us about your fitness journey, the trainers, facilities, and what results you've achieved..."></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="achievements">Notable Achievements (optional):</label>
+                    <input type="text" id="achievements" placeholder="e.g., Lost 15kg, Ran first 5K, Bench pressed 100kg">
+                </div>
+                <div class="form-group">
+                    <label for="photo">Upload Your Progress Photo (Optional):</label>
+                    <div class="photo-upload">
+                        <input type="file" id="photo" accept="image/*">
+                        <label for="photo" class="upload-btn"><i class="fas fa-camera"></i> Choose File</label>
+                        <span id="fileName">No file chosen</span>
+                    </div>
+                </div>
+                <button type="submit" class="submit-btn">Submit Your Review</button>
+            </form>
+        </div>
+
+        <div class="reviews-container">
+            <div class="add-review-btn" id="addReviewBtn">
+                <i class="fas fa-edit"></i> Share Your Fitness Journey
+            </div>
+
+            <div class="filter-controls">
+                <div class="filter-group">
+                    <label for="sortBy">Sort by:</label>
+                    <select id="sortBy">
+                        <option value="newest">Newest First</option>
+                        <option value="highest">Highest Rated</option>
+                        <option value="lowest">Lowest Rated</option>
+                        <option value="longest">Longest Membership</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label for="filterRating">Filter by rating:</label>
+                    <select id="filterRating">
+                        <option value="all">All Ratings</option>
+                        <option value="5">5 Stars Only</option>
+                        <option value="4">4+ Stars</option>
+                        <option value="3">3+ Stars</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- Sample Reviews -->
+            <div class="review-card" data-rating="5" data-duration="2+">
+                <div class="review-header">
+                    <div class="member-photo">
+                        <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Rajesh Kumar">
+                        <div class="member-badge premium">PREMIUM</div>
+                    </div>
+                    <div class="member-info">
+                        <h3>Rajesh Kumar</h3>
+                        <div class="meta-info">
+                            <span class="duration"><i class="far fa-calendar-alt"></i> 2+ years</span>
+                            <span class="membership"><i class="far fa-id-card"></i> Premium</span>
+                        </div>
+                        <div class="rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <span>5.0</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="review-content">
+                    <p>Joining Elite Fitness was the best decision I made for my health. When I started, I was 105kg with high blood pressure. The trainers created a customized plan that worked with my busy IT job schedule. Today, I'm 78kg with normal BP and ran my first marathon last month!</p>
+                    <div class="achievements">
+                        <i class="fas fa-trophy"></i> <strong>Achievements:</strong> Lost 27kg, Normalized BP, Completed Mumbai Marathon
+                    </div>
+                </div>
+                <div class="review-footer">
+                    <div class="review-date">Posted: June 15, 2023</div>
+                    <div class="review-helpful">
+                        <button class="helpful-btn"><i class="far fa-thumbs-up"></i> Helpful (24)</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="review-card featured" data-rating="5" data-duration="1-2">
+                <div class="featured-badge">STAFF PICK</div>
+                <div class="review-header">
+                    <div class="member-photo">
+                        <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Priya Sharma">
+                        <div class="member-badge family">FAMILY</div>
+                    </div>
+                    <div class="member-info">
+                        <h3>Priya Sharma</h3>
+                        <div class="meta-info">
+                            <span class="duration"><i class="far fa-calendar-alt"></i> 1.5 years</span>
+                            <span class="membership"><i class="far fa-id-card"></i> Family</span>
+                        </div>
+                        <div class="rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <span>5.0</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="review-content">
+                    <p>As a mother of two, I struggled with post-pregnancy weight and low energy. The women's-only sessions made me comfortable to start. The nutrition guidance was game-changing - I learned to eat right for my body type. My whole family now comes - my husband takes the HIIT classes while the kids enjoy the childcare area. We've made fitness a family value!</p>
+                    <div class="achievements">
+                        <i class="fas fa-trophy"></i> <strong>Achievements:</strong> Post-pregnancy transformation, Family fitness routine, Completed 100 yoga classes
+                    </div>
+                    <div class="progress-photos">
+                        <div class="progress-photo">
+                            <img src="https://via.placeholder.com/150x150/e63946/ffffff?text=Before" alt="Before">
+                            <span>Before</span>
+                        </div>
+                        <div class="progress-photo">
+                            <img src="https://via.placeholder.com/150x150/ffffff/e63946?text=After" alt="After">
+                            <span>After 1 Year</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="review-footer">
+                    <div class="review-date">Posted: May 2, 2023</div>
+                    <div class="review-helpful">
+                        <button class="helpful-btn"><i class="far fa-thumbs-up"></i> Helpful (56)</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="review-card" data-rating="4" data-duration="6-12">
+                <div class="review-header">
+                    <div class="member-photo">
+                        <img src="https://randomuser.me/api/portraits/men/67.jpg" alt="Amit Patel">
+                        <div class="member-badge student">STUDENT</div>
+                    </div>
+                    <div class="member-info">
+                        <h3>Amit Patel</h3>
+                        <div class="meta-info">
+                            <span class="duration"><i class="far fa-calendar-alt"></i> 8 months</span>
+                            <span class="membership"><i class="far fa-id-card"></i> Student</span>
+                        </div>
+                        <div class="rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                            <span>4.0</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="review-content">
+                    <p>The student discount makes this gym affordable for me. Equipment is top-notch and well-maintained. The only downside is it gets crowded during 6-8pm. I've learned to come early mornings instead. Special shoutout to trainer Rohan who helped me correct my squat form - my knee pain disappeared after his corrections!</p>
+                    <div class="achievements">
+                        <i class="fas fa-trophy"></i> <strong>Achievements:</strong> Gained 8kg muscle, Fixed squat form, Deadlift 1.5x bodyweight
+                    </div>
+                </div>
+                <div class="review-footer">
+                    <div class="review-date">Posted: April 22, 2023</div>
+                    <div class="review-helpful">
+                        <button class="helpful-btn"><i class="far fa-thumbs-up"></i> Helpful (12)</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- More sample reviews would continue here -->
+        </div>
+
+        <div class="testimonial-videos">
+            <h2 class="section-title"><span>Member</span> Success Stories</h2>
+            <div class="video-grid">
+                <div class="video-card">
+                    <div class="video-thumbnail">
+                        <img src="https://via.placeholder.com/400x225/e63946/ffffff?text=Video+Thumbnail" alt="Video Thumbnail">
+                        <div class="play-btn"><i class="fas fa-play"></i></div>
+                    </div>
+                    <h3>From 120kg to Marathon Runner</h3>
+                    <p>Rahul's 18-month transformation journey</p>
+                </div>
+                <div class="video-card">
+                    <div class="video-thumbnail">
+                        <img src="https://via.placeholder.com/400x225/e63946/ffffff?text=Video+Thumbnail" alt="Video Thumbnail">
+                        <div class="play-btn"><i class="fas fa-play"></i></div>
+                    </div>
+                    <h3>Senior Fitness Success</h3>
+                    <p>How 62-year-old Meena regained mobility</p>
+                </div>
+                <div class="video-card">
+                    <div class="video-thumbnail">
+                        <img src="https://via.placeholder.com/400x225/e63946/ffffff?text=Video+Thumbnail" alt="Video Thumbnail">
+                        <div class="play-btn"><i class="fas fa-play"></i></div>
+                    </div>
+                    <h3>Post-Pregnancy Transformation</h3>
+                    <p>Neha's journey back to strength</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="cta-section">
+            <h2>Ready to Start Your Fitness Journey?</h2>
+            <p>Join our community of 5,000+ members achieving their goals</p>
+            <div class="cta-buttons">
+                <a href="#" class="cta-btn primary"><i class="fas fa-dumbbell"></i> Book a Free Trial</a>
+                <a href="#" class="cta-btn secondary"><i class="fas fa-phone-alt"></i> Call Us Now</a>
+            </div>
+        </div>
+    </div>
+
+    
+
+    <!-- Add this section where you want the booking form to appear -->
+<div class="booking-section" id="bookingSection">
+    <h2 class="section-title"><span>Book Your</span> Free Session</h2>
+    
+    <div class="booking-container">
+        <div class="booking-info">
+            <h3>Why Try Our Free Session?</h3>
+            <ul class="benefits-list">
+                <li><i class="fas fa-check-circle"></i> Full access to our premium facilities</li>
+                <li><i class="fas fa-check-circle"></i> Personalized fitness assessment</li>
+                <li><i class="fas fa-check-circle"></i> One-on-one consultation with a trainer</li>
+                <li><i class="fas fa-check-circle"></i> No obligation to join</li>
+                <li><i class="fas fa-check-circle"></i> Custom workout plan</li>
+            </ul>
+            
+            <div class="testimonial-quote">
+                <div class="quote-text">
+                    "The free session convinced me this was the right gym. The trainer understood my goals and showed me exactly how they could help me achieve them."
+                </div>
+                <div class="quote-author">
+                    - Rahul M., Member since 2022
+                </div>
+            </div>
+        </div>
+        
+        <div class="booking-form">
+            <form id="freeSessionForm">
+                <div class="form-group">
+                    <label for="bookingName">Full Name*</label>
+                    <input type="text" id="bookingName" required placeholder="Enter your full name">
+                </div>
+                
+                <div class="form-group">
+                    <label for="bookingEmail">Email*</label>
+                    <input type="email" id="bookingEmail" required placeholder="Enter your email">
+                </div>
+                
+                <div class="form-group">
+                    <label for="bookingPhone">Phone Number*</label>
+                    <input type="tel" id="bookingPhone" required placeholder="Enter your phone number">
+                </div>
+                
+                <div class="form-group">
+                    <label for="bookingDate">Preferred Date*</label>
+                    <input type="date" id="bookingDate" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="bookingTime">Preferred Time*</label>
+                    <select id="bookingTime" required>
+                        <option value="">Select time slot</option>
+                        <option value="morning">Morning (6am-10am)</option>
+                        <option value="afternoon">Afternoon (12pm-3pm)</option>
+                        <option value="evening">Evening (5pm-9pm)</option>
+                        <option value="custom">Request custom time</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="bookingGoals">Fitness Goals</label>
+                    <textarea id="bookingGoals" rows="3" placeholder="Tell us about your fitness goals (optional)"></textarea>
+                </div>
+                
+                <div class="form-group">
+                    <label for="bookingExperience">Current Fitness Level</label>
+                    <select id="bookingExperience">
+                        <option value="">Select your level</option>
+                        <option value="beginner">Beginner (just starting)</option>
+                        <option value="intermediate">Intermediate (some experience)</option>
+                        <option value="advanced">Advanced (regular exerciser)</option>
+                    </select>
+                </div>
+                
+                <button type="submit" class="booking-submit-btn">
+                    <i class="fas fa-calendar-check"></i> Book My Free Session
+                </button>
+                
+                <div class="privacy-note">
+                    We respect your privacy. Your information will not be shared with third parties.
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<!-- Booking Confirmation Modal -->
+<div class="booking-modal" id="bookingModal">
+    <div class="modal-content">
+        <button class="modal-close-btn" id="modalCloseBtn">&times;</button>
+        <div class="modal-icon">
+            <i class="fas fa-check-circle"></i>
+        </div>
+        <h3>Your Free Session is Booked!</h3>
+        <p id="confirmationMessage"></p>
+        <div class="modal-details" id="bookingDetails"></div>
+        <div class="modal-actions">
+            <button class="modal-print-btn" id="printConfirmation">
+                <i class="fas fa-print"></i> Print Confirmation
+            </button>
+            <button class="modal-calendar-btn" id="addToCalendar">
+                <i class="fas fa-calendar-plus"></i> Add to Calendar
+            </button>
+        </div>
+        <div class="modal-next-steps">
+            <h4>What to Expect Next:</h4>
+            <ol>
+                <li>You'll receive a confirmation email with details</li>
+                <li>Our trainer will call you within 24 hours</li>
+                <li>Bring comfortable workout clothes</li>
+                <li>Arrive 10 minutes early for paperwork</li>
+            </ol>
+        </div>
+    </div>
+</div>
+<div class="overlay" id="overlay"></div>
+    <script src="reviews.js"></script>
+</body>
+</html>

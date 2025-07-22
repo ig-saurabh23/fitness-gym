@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Join Fitness Freak</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="joinus.css">
+</head>
+<body>
+    <header>
+        <a href="index.html" class="logo">Fitness<span>Freak</span></a>
+        <div class='bx bx-menu' id="menu-icon"></div>
+        <ul class="navbar">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="index.html#services">Services</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="pricing.html">Pricing</a></li>
+            <li><a href="reviews.html">Review</a></li>
+        </ul>
+    </header>
+
+    <section class="join-container">
+        <div class="join-header">
+            <h1>Join <span>Fitness Freak</span></h1>
+            <p>Start your fitness journey with us today!</p>
+        </div>
+
+        <form id="joinForm" class="join-form">
+            <!-- Personal Information -->
+            <fieldset>
+                <legend>Personal Information</legend>
+                <div class="form-group">
+                    <label for="fullName">Full Name*</label>
+                    <input type="text" id="fullName" name="fullName" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">Email*</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="phone">Phone Number*</label>
+                    <input type="tel" id="phone" name="phone" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="dob">Date of Birth*</label>
+                    <input type="date" id="dob" name="dob" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="gender">Gender*</label>
+                    <select id="gender" name="gender" required>
+                        <option value="">Select</option>
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                        <option value="other">Other</option>
+                        <option value="prefer-not-to-say">Prefer not to say</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="photo">Upload Photo (ID Proof/Gym Photo)*</label>
+                    <input type="file" id="photo" name="photo" accept="image/*" required>
+                    <div class="photo-preview" id="photoPreview">
+                        <i class='bx bx-user'></i>
+                        <span>Preview will appear here</span>
+                    </div>
+                </div>
+            </fieldset>
+
+            <!-- Health Information -->
+            <fieldset>
+                <legend>Health Information</legend>
+                <div class="form-group">
+                    <label for="height">Height (cm)*</label>
+                    <input type="number" id="height" name="height" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="weight">Weight (kg)*</label>
+                    <input type="number" id="weight" name="weight" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="medicalConditions">Any Medical Conditions</label>
+                    <textarea id="medicalConditions" name="medicalConditions" rows="3"></textarea>
+                </div>
+                
+                <div class="form-group">
+                    <label for="fitnessGoals">Fitness Goals*</label>
+                    <select id="fitnessGoals" name="fitnessGoals" required>
+                        <option value="">Select your goal</option>
+                        <option value="weight-loss">Weight Loss</option>
+                        <option value="muscle-gain">Muscle Gain</option>
+                        <option value="strength-training">Strength Training</option>
+                        <option value="general-fitness">General Fitness</option>
+                        <option value="rehabilitation">Rehabilitation</option>
+                    </select>
+                </div>
+            </fieldset>
+
+            <!-- Membership Plan -->
+            <fieldset>
+                <legend>Membership Plan</legend>
+                <div class="plan-options">
+                    <div class="plan-card">
+                        <input type="radio" id="basicPlan" name="membershipPlan" value="basic" data-monthly-price="999" required>
+                        <label for="basicPlan">
+                            <h3>Basic</h3>
+                            <div class="price">₹999<span>/month</span></div>
+                            <ul>
+                                <li>Gym Access (6AM-8PM)</li>
+                                <li>Cardio Equipment</li>
+                                <li>Free Weights</li>
+                            </ul>
+                        </label>
+                    </div>
+                    
+                    <div class="plan-card">
+                        <input type="radio" id="standardPlan" name="membershipPlan" value="standard" data-monthly-price="1799">
+                        <label for="standardPlan">
+                            <h3>Standard</h3>
+                            <div class="price">₹1,799<span>/month</span></div>
+                            <ul>
+                                <li>Gym Access (6AM-10PM)</li>
+                                <li>All Equipment</li>
+                                <li>2 Group Classes/Week</li>
+                                <li>Basic Diet Plan</li>
+                            </ul>
+                        </label>
+                    </div>
+                    
+                    <div class="plan-card">
+                        <input type="radio" id="premiumPlan" name="membershipPlan" value="premium" data-monthly-price="2999">
+                        <label for="premiumPlan">
+                            <h3>Premium</h3>
+                            <div class="price">₹2,999<span>/month</span></div>
+                            <ul>
+                                <li>24/7 Gym Access</li>
+                                <li>Unlimited Classes</li>
+                                <li>Personal Trainer (4 sessions)</li>
+                                <li>Customized Diet Plan</li>
+                            </ul>
+                        </label>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="duration">Membership Duration*</label>
+                    <select id="duration" name="duration" required>
+                        <option value="">Select duration</option>
+                        <option value="1" data-discount="0">1 Month</option>
+                        <option value="3" data-discount="5">3 Months (5% Discount)</option>
+                        <option value="6" data-discount="10">6 Months (10% Discount)</option>
+                        <option value="12" data-discount="15">12 Months (15% Discount)</option>
+                    </select>
+                </div>
+
+                <!-- Payment Summary -->
+                <div class="payment-summary" id="paymentSummary">
+                    <div class="summary-row">
+                        <span>Plan Price:</span>
+                        <span id="planPrice">₹0</span>
+                    </div>
+                    <div class="summary-row">
+                        <span>Duration:</span>
+                        <span id="durationText">0 Months</span>
+                    </div>
+                    <div class="summary-row">
+                        <span>Discount:</span>
+                        <span id="discountAmount">₹0 (0%)</span>
+                    </div>
+                    <div class="summary-row total">
+                        <span>Total Payable:</span>
+                        <span id="totalPayable">₹0</span>
+                    </div>
+                </div>
+            </fieldset>
+
+            <!-- Payment Information -->
+            <fieldset>
+                <legend>Payment Information</legend>
+                <div class="form-group">
+                    <label>Payment Method*</label>
+                    <div class="payment-methods">
+                        <div class="payment-option">
+                            <input type="radio" id="creditCard" name="paymentMethod" value="credit-card" required>
+                            <label for="creditCard">
+                                <i class='bx bx-credit-card'></i>
+                                <span>Credit/Debit Card</span>
+                            </label>
+                        </div>
+                        
+                        <div class="payment-option">
+                            <input type="radio" id="upi" name="paymentMethod" value="upi">
+                            <label for="upi">
+                                <i class='bx bx-rupee'></i>
+                                <span>UPI Payment</span>
+                            </label>
+                        </div>
+                        
+                        <div class="payment-option">
+                            <input type="radio" id="netBanking" name="paymentMethod" value="net-banking">
+                            <label for="netBanking">
+                                <i class='bx bx-bank'></i>
+                                <span>Net Banking</span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Credit Card Details -->
+                <div class="payment-details" id="creditCardDetails">
+                    <div class="form-group">
+                        <label for="cardNumber">Card Number*</label>
+                        <input type="text" id="cardNumber" name="cardNumber" placeholder="1234 5678 9012 3456">
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="expiryDate">Expiry Date*</label>
+                            <input type="text" id="expiryDate" name="expiryDate" placeholder="MM/YY">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="cvv">CVV*</label>
+                            <input type="text" id="cvv" name="cvv" placeholder="123">
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="cardName">Name on Card*</label>
+                        <input type="text" id="cardName" name="cardName">
+                    </div>
+                </div>
+                
+                <!-- UPI Details -->
+                <div class="payment-details" id="upiDetails">
+                    <div class="form-group">
+                        <label for="upiId">UPI ID*</label>
+                        <input type="text" id="upiId" name="upiId" placeholder="yourname@upi">
+                    </div>
+                    <p class="note">You'll be redirected to your UPI app for payment confirmation</p>
+                </div>
+                
+                <!-- Net Banking Details -->
+                <div class="payment-details" id="netBankingDetails">
+                    <div class="form-group">
+                        <label for="bankName">Bank Name*</label>
+                        <select id="bankName" name="bankName">
+                            <option value="">Select Bank</option>
+                            <option value="sbi">State Bank of India</option>
+                            <option value="hdfc">HDFC Bank</option>
+                            <option value="icici">ICICI Bank</option>
+                            <option value="axis">Axis Bank</option>
+                            <option value="other">Other Bank</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="accountNumber">Account Number*</label>
+                        <input type="text" id="accountNumber" name="accountNumber">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="ifscCode">IFSC Code*</label>
+                        <input type="text" id="ifscCode" name="ifscCode">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="accountName">Account Holder Name*</label>
+                        <input type="text" id="accountName" name="accountName">
+                    </div>
+                </div>
+            </fieldset>
+
+            <!-- Terms and Conditions -->
+            <div class="form-group terms">
+                <input type="checkbox" id="terms" name="terms" required>
+                <label for="terms">I agree to the <a href="#">Terms & Conditions</a> and <a href="#">Privacy Policy</a>*</label>
+            </div>
+
+            <!-- Submit Button -->
+            <div class="form-buttons">
+                <button type="submit" class="submit-btn">Complete Registration</button>
+                <button type="reset" class="reset-btn">Reset Form</button>
+            </div>
+        </form>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-col">
+                <h3>Fitness<span>Freak</span></h3>
+                <p>Your ultimate destination for fitness and health.</p>
+            </div>
+            <div class="footer-col">
+                <h3>Contact Us</h3>
+                <ul>
+                    <li><i class='bx bx-map'></i> 123 Fitness Street, Gym City</li>
+                    <li><i class='bx bx-phone'></i> +1 234 567 890</li>
+                    <li><i class='bx bx-envelope'></i> info@fitnessfreak.com</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2023 FitnessFreak. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="joinus.js"></script>
+</body>
+</html>

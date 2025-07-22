@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Book a Free Session | Fitness Freak Gym</title>
+  <link rel="stylesheet" href="book-session.css" />
+</head>
+<body>
+
+  <section class="session-section">
+    <h2 class="form-title"><span>Book</span> Your Free Session</h2>
+
+    <form class="session-form" onsubmit="return validateForm()">
+      <div class="form-group">
+        <label for="name">Full Name</label>
+        <input type="text" id="name" placeholder="Enter your name" required />
+      </div>
+
+      <div class="form-group">
+        <label for="email">Email Address</label>
+        <input type="email" id="email" placeholder="Enter your email" required />
+      </div>
+
+      <div class="form-group">
+        <label for="phone">Phone Number</label>
+        <input type="tel" id="phone" placeholder="Enter your phone number" required />
+      </div>
+
+      <div class="form-group">
+        <label for="goal">Fitness Goal</label>
+        <select id="goal" required>
+          <option value="">-- Select --</option>
+          <option>Weight Loss</option>
+          <option>Muscle Gain</option>
+          <option>Strength Training</option>
+          <option>General Fitness</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="date">Preferred Date</label>
+        <input type="date" id="date" required />
+      </div>
+
+      <div class="form-buttons">
+        <button type="submit" class="submit-btn">Submit</button>
+        <button type="reset" class="reset-btn">Reset</button>
+      </div>
+    </form>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
